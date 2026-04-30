@@ -74,6 +74,17 @@ function Services () {
                 </div>
             </section>
 
+            <section className="services-images-section">
+                <div className="container">
+                    <h2>Categorias de Servicios</h2>
+                    <div className="services-images-grid">
+                        <div className="services-image-card">
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
     );
 };

@@ -95,3 +95,18 @@
 .service-card p {
     color: #4b5563;
 }
+
+/*Images Section*/
+
+.services-images-section {
+    padding: 4rem 0;
+    background-color: #f9fafb;
+}
+
+.services-images-section h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-align: center;
+    color: #111827;
+    margin-bottom: 3rem;
+}

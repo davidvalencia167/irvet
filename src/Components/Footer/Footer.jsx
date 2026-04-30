@@ -1,6 +1,7 @@
 
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import "./Footer.css";
+import { SiFacebook, SiInstagram } from "@icons-pack/react-simple-icons";
 
 function Footer() {
     return(
@@ -28,6 +29,9 @@ function Footer() {
                                 <p>info@irvet.com</p>
                             </div>
                         </div>
+
+                        
+                        
                     </div>
                     <div className="footer-section">
                         <h3>Horarios</h3>
@@ -49,6 +53,23 @@ function Footer() {
                             clínico veterinario con tecnología de punta.
                         </p>
                     </div>
+                    
+                   <div className="footer-section">
+                        <h3>Redes Sociales</h3>
+                        <div className="info-item">
+                            <SiFacebook size={20}/>
+                            <div>
+                                <p>IRVET - Instituto de Resultados Veterinarios</p>
+                            </div>
+                        </div>
+                        <div className="info-item">
+                            <SiInstagram size={20}/>
+                            <div>
+                                <p>laboratorio_irvet</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div className="footer-bottom">
                     <p>
