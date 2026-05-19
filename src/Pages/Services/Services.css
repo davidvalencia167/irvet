@@ -1,11 +1,10 @@
 
-
 .services-hero {
-    background: linear-gradient(to bottom right, #67D9D9, #8B5AA5);
+    background: linear-gradient(to bottom right, #2ec4b6, #7b5ea7);
     color: white;
     padding: 5rem 0;
     text-align: center;
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 0.8s ease-in-out;
 }
 
 .services-hero h1 {
@@ -19,94 +18,212 @@
     font-size: 1.25rem;
     max-width: 48rem;
     margin: 0 auto;
+    opacity: 0.95;
 }
 
-/*Services-Grid*/
+/*Categorias de Servicios*/
 
-.services-grid-section {
+.categories-section {
     padding: 4rem 0;
     background-color: white;
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
-
-@media (min-width: 768px) {
-    .services-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (min-width: 1200px) {
-    .services-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-}
-
-.service-card {
-    background-color: white;
-    border: 2px solid #e5e7eb;
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-    opacity: 0;
-    animation: scaleIn 0.5s ease-out forwards;
-}
-
-.service-card:hover {
-    border-color: #67D9D9;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    transform: translateY(-8px);
-}
-
-.service-icon {
-    width: 3rem;
-    height: 3rem;
-    background: linear-gradient(to bottom right, #67D9D9, #8B5AA5);
-    border-radius: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-    transition: transform 0.4s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover .service-icon {
-    transform: rotate(360deg) scale(1.1);
-    box-shadow: 0 8px 20px rgba(103, 217, 217, 0.5);
-}
-
-.service-icon svg {
-    width: 1.5rem;
-    height: 1.5rem;
-    color: white;
-}
-
-.service-card h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-    color: #111827;
-}
-
-.service-card p {
-    color: #4b5563;
-}
-
-/*Images Section*/
-
-.services-images-section {
-    padding: 4rem 0;
-    background-color: #f9fafb;
-}
-
-.services-images-section h2 {
+.categories-section h2 {
     font-size: 2.25rem;
     font-weight: 700;
     text-align: center;
     color: #111827;
     margin-bottom: 3rem;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.category-card {
+    background: white;
+    border: 2px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    opacity: 0;
+    animation: scaleIn 0.5s ease-out forwards;
+}
+
+.category-card.teal {
+  background: linear-gradient(to bottom right, rgba(46, 196, 182, 0.1), rgba(46, 196, 182, 0.05));
+  border-color: rgba(46, 196, 182, 0.3);
+}
+
+.category-card.purple {
+  background: linear-gradient(to bottom right, rgba(123, 94, 167, 0.1), rgba(123, 94, 167, 0.05));
+  border-color: rgba(123, 94, 167, 0.3);
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.category-card.teal:hover {
+  border-color: #2ec4b6;
+  box-shadow: 0 15px 30px rgba(46, 196, 182, 0.3);
+}
+
+.category-card.purple:hover {
+  border-color: #7b5ea7;
+  box-shadow: 0 15px 30px rgba(123, 94, 167, 0.3);
+}
+
+.category-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    transition: transform 0.4s ease;
+}
+
+.category-card.teal .category-icon {
+    background: linear-gradient(135deg, #2ec4b6, #7b5ea7);
+}
+
+.category-card.purple .category-icon {
+    background: linear-gradient(135deg, #7b5ea7, #2ec4b6);
+}
+
+.category-card:hover .category-icon {
+    transform: rotate(360deg) scale(1.1);
+}
+
+.emoji-icon {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.emoji-icon-large {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.category-card h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+
+@media (min-width: 1200px) {
+    .categories-grid {
+        gap: 1.75rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .category-icon {
+        width: 60px;
+        height: 60px;
+    }
+    .emoji-icon { font-size: 24px; }
+}
+
+/*Pricing Section*/
+
+.pricing-section {
+    padding: 4rem 0;
+    background-color: #f9fafb;
+}
+
+.pricing-section h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-align: center;
+    color: #111827;
+    margin-bottom: 3rem;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.price-table {
+    background: white;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.28s ease;
+}
+
+.price-table:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.price-table-header {
+    background: linear-gradient(135deg, #2ec4b6, #7b5ea7);
+    color: white;
+    padding: 1rem 1.25rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+}
+
+.price-table-body {
+    padding: 0.5rem 0;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.85rem 1.25rem;
+    border-bottom: 1px solid #eef2f6;
+    transition: background-color 0.12s ease;
+}
+
+.price-row:last-child {
+    border-bottom: none;
+}
+
+.price-row:hover {
+    background-color: rgba(46, 196, 182, 0.05);
+}
+
+.test-name {
+    font-size: 0.98rem;
+    color: #374151;
+    font-weight: 500;
+    display: block;
+    max-width: 75%;
+}
+
+.price-value {
+    color: #7b5ea7;
+    font-weight: 700;
+    font-size: 0.98rem;
+    white-space: nowrap;
+    margin-left: 0.75rem;
+}
+
+@media (min-width: 1100px) {
+    .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .price-table-header { font-size: 1.05rem; }
+    .test-name { max-width: 68%; }
 }

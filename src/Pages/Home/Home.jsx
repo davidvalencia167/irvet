@@ -3,6 +3,8 @@ import "./Home.css";
 import { Link } from "react-router";
 import { ArrowRight, Award, Clock, Heart, Microscope } from "lucide-react";
 import logo from "../../assets/images/logo_irvet.jpeg";
+import irvet from "../../assets/images/Irvet.jpg";
+
 import promoImage from "../../assets/images/promo-semana.jpg";
 
 function Home () {
@@ -29,9 +31,7 @@ function Home () {
                         </div>
                     </div>
 
-                    <div className="hero-logo-card" aria-label="IRVET Logo">
-                        <img src={logo} alt="Logo de IRVET" />
-                    </div>
+                    <img className="hero-logo-image" src={irvet} alt="Logo de IRVET" />
                 </div>
             </div>
         </section>
