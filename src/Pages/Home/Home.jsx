@@ -3,7 +3,6 @@ import "./Home.css";
 import { Link } from "react-router";
 import { ArrowRight, Award, Clock, Heart, Microscope } from "lucide-react";
 import irvet from "../../assets/images/Irvet.jpg";
-
 import promoImage from "../../assets/images/promo-semana.jpg";
 
 function Home () {
