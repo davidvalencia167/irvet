@@ -38,10 +38,8 @@ function Footer() {
                         <div className="info-item">
                             <Clock size={20}/>
                             <div>
-                                <p>Lunes a Viernes</p>
-                                <p>8:30 AM - 6:00 PM</p>
-                                <p style={{marginTop: "0.5rem"}}>Sábados</p>
-                                <p>9:00 AM - 12:00 PM</p>
+                                <p>Lunes a Sabado</p>
+                                <p>8:00 AM - 6:00 PM</p>
                             </div>
                         </div>
                     </div>
